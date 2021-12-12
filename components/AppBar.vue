@@ -108,9 +108,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.cp {
-  cursor: pointer;
-}
-</style>
