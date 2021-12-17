@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 class="text-subtitle-1 font-weight-bold grey--text mx-4 mb-5">
-      {{ title }}
+      {{ $t('title.index') }}
     </h1>
 
     <v-container>
@@ -54,7 +54,6 @@
 export default {
   data () {
     return {
-      title: 'Dashboard',
       projects: [
         { title: 'Design a new website', person: 'The Net Ninjaaaaaaaaa', due: '1st Jan 2019', status: 'ongoing', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!' },
         { title: 'Code up the homepage', person: 'Chun Li', due: '10th Jan 2019', status: 'complete', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!' },
@@ -65,7 +64,7 @@ export default {
   },
   head () {
     return {
-      title: this.title
+      title: this.$t('title.index')
     }
   },
   computed: {

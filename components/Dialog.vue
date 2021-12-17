@@ -7,12 +7,12 @@
     </template>
     <v-card class="pa-5 text-center">
       <v-form ref="form" v-model="valid">
-        <v-text-field v-model="project.title" autofocus :label="labeles.title" :rules="rules.title" />
-        <v-textarea v-model="project.info" :label="labeles.info" :rules="rules.info" />
+        <v-text-field v-model="project.title" autofocus :label="$t('project.title')" :rules="rules.title" />
+        <v-textarea v-model="project.info" :label="$t('project.info')" :rules="rules.info" />
 
         <v-menu offset-y max-width="290">
           <template #activator="{ on, attrs }">
-            <v-text-field v-model="project.due" :label="labeles.due" :rules="rules.due" v-bind="attrs" v-on="on" />
+            <v-text-field v-model="project.due" :label="$t('project.due')" :rules="rules.due" v-bind="attrs" v-on="on" />
           </template>
 
           <v-date-picker v-model="project.due" :locale="datePicker.locale" :first-day-of-week="datePicker.firstDayOfWeek" :day-format="datePicker.dayFormat" />
@@ -38,18 +38,13 @@ export default {
         info: '',
         due: null
       },
-      labeles: {
-        title: 'プロジェクト名',
-        info: '内容',
-        due: '期限'
-      },
       rules: {
         title: [
-          v => !!v || 'プロジェクト名を入力して下さい',
+          v => !!v || this.$t('project.title') + 'を入力して下さい',
           v => v.length <= 15 || '15文字以内'
         ],
         info: [
-          v => !!v || '内容を入力して下さい',
+          v => !!v || this.$t('project.info') + '入力して下さい',
           v => v.length <= 30 || '30文字以内'
         ],
         due: [

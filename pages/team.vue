@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 class="grey--text text-subtitle-1 font-weight-bold mx-4">
-      {{ title }}
+      {{ $t('title.team') }}
     </h1>
 
     <v-container>
@@ -52,7 +52,6 @@ import avatar5 from '@/assets/avatar-5.png'
 export default {
   data () {
     return {
-      title: 'チーム',
       teams: [
         { name: 'The Net Ninja', role: 'Web developer', avatar: avatar1 },
         { name: 'Ryu', role: 'Graphic designer', avatar: avatar2 },
@@ -64,7 +63,7 @@ export default {
   },
   head () {
     return {
-      title: this.title
+      title: this.$t('title.team')
     }
   }
 }
