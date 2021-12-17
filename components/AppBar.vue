@@ -48,11 +48,13 @@
             <v-img :src="user.img" :alt="user.alt" />
           </v-avatar>
         </div>
-        <div>
+        <div class="mb-3">
           <h1 class="text-h6 font-weight-bold white--text">
             {{ user.name }}
           </h1>
         </div>
+
+        <Dialog />
       </div>
 
       <v-list>
